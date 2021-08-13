@@ -17,7 +17,7 @@ class AwesomeStatusBarTrophiesBar(rumps.App):
 		uResponse = requests.get("https://api.brawlstars.com/v1/players/%23uqly00ur", headers=headers)
 		userJson = uResponse.json()
 		print(userJson["trophies"])
-		self.title="Elias6970: "+str(uResponse.json()["trophies"])
+		self.title=str(uResponse.json()["name"])+":"+str(uResponse.json()["trophies"])
 
 if __name__=="__main__":
 	AwesomeStatusBarTrophiesBar().run()
